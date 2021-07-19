@@ -13,6 +13,8 @@ services:
         environment:
             - NODE_ENV=development
 
+            # commented out while debugging
+            
       # api:
       #   image: api
       #   build:
