@@ -2,6 +2,16 @@
 version: "3.7"
 
 services:
+  ui:
+    container_name: ui
+    build: ui
+    volumes:
+        - ./ui:/app
+    ports:
+        - 3000:3000
+    environment:
+        - NODE_ENV=development
+        
   api:
     container_name: api
     build: api

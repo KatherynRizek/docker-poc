@@ -17,5 +17,4 @@ EXPOSE 5000
 FROM mcr.microsoft.com/dotnet/sdk:5.0
 WORKDIR /app
 COPY --from=build-env /app/out .
-# ENTRYPOINT ["dotnet", "api.dll"]
-CMD ["dotnet", "run"]
+CMD ["dotnet", "watch", "run"]
