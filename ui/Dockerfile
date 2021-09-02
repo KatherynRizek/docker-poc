@@ -7,8 +7,12 @@ WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 
 # install and cache app dependencies
-COPY package.json /app/package.json
+COPY package.json ./
+COPY package-lock.json ./
 RUN npm install
-RUN npm install react-scripts@3.3.1 -g
+RUN npm install react-scripts@4.0.3 -g
+
+# add app
+COPY . ./
 
 CMD ["npm", "start"]
