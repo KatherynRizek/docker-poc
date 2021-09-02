@@ -13,6 +13,6 @@ RUN npm install
 RUN npm install react-scripts@4.0.3 -g
 
 # add app
-COPY . ./
+COPY . .
 
 CMD ["npm", "start"]
